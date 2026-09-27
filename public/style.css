@@ -184,6 +184,7 @@ nav a:hover {
 }
 
 
+
 /* -------------------- */
 /* PROJECTS */
 /* -------------------- */
@@ -228,27 +229,21 @@ nav a:hover {
     display: grid;
 
     grid-template-columns:
-        2fr
+        2.2fr
         1fr;
-
-    aspect-ratio: 8 / 3;
 
     margin-bottom: 120px;
 
     border: 1px solid var(--border);
 
     background: var(--surface);
-
-    overflow: hidden;
 }
 
-
-/* Alternate layout */
 
 .project.reverse {
     grid-template-columns:
         1fr
-        2fr;
+        2.2fr;
 }
 
 
@@ -268,11 +263,14 @@ nav a:hover {
 
 .project-image {
     width: 100%;
-    height: 100%;
+
+    aspect-ratio: 16 / 9;
 
     overflow: hidden;
 
     background: #050607;
+
+    align-self: start;
 }
 
 
@@ -299,14 +297,20 @@ nav a:hover {
 /* -------------------- */
 
 .project-content {
-    height: 100%;
-
-    padding: 32px;
+    padding: 30px;
 
     display: flex;
     flex-direction: column;
 
     min-width: 0;
+}
+
+
+
+@media (min-width: 901px) {
+    .project-content {
+        height: 100%;
+    }
 }
 
 
@@ -348,7 +352,7 @@ nav a:hover {
 .project-role {
     color: var(--accent);
 
-    margin-bottom: 25px;
+    margin-bottom: 22px;
 
     font-weight: 600;
 }
@@ -357,7 +361,7 @@ nav a:hover {
 .project-description {
     color: var(--text-muted);
 
-    margin-bottom: 30px;
+    margin-bottom: 26px;
 
     font-size: 1rem;
 }
@@ -373,9 +377,9 @@ nav a:hover {
     grid-template-columns:
         repeat(2, minmax(0, 1fr));
 
-    gap: 30px;
+    gap: 24px;
 
-    margin-bottom: 30px;
+    margin-bottom: 24px;
 }
 
 
@@ -400,7 +404,7 @@ nav a:hover {
 
     margin-bottom: 6px;
 
-    line-height: 1.5;
+    line-height: 1.45;
 }
 
 
@@ -436,6 +440,7 @@ nav a:hover {
 
     font-size: 0.8rem;
 }
+
 
 
 /* -------------------- */
@@ -551,10 +556,8 @@ footer {
 @media (max-width: 1100px) {
 
     .project {
-        aspect-ratio: auto;
-
         grid-template-columns:
-            1.4fr
+            1.6fr
             1fr;
     }
 
@@ -562,18 +565,17 @@ footer {
     .project.reverse {
         grid-template-columns:
             1fr
-            1.4fr;
+            1.6fr;
     }
 
 
-    .project-image {
-        aspect-ratio: 16 / 9;
-        height: auto;
+    .project-content {
+        padding: 26px;
     }
 
 
-    .project-image img {
-        height: 100%;
+    .project-details {
+        grid-template-columns: 1fr;
     }
 
 }
@@ -588,8 +590,6 @@ footer {
     .project,
     .project.reverse {
         grid-template-columns: 1fr;
-
-        aspect-ratio: auto;
     }
 
 
@@ -606,11 +606,6 @@ footer {
 
     .project-content {
         height: auto;
-    }
-
-
-    .project-details {
-        grid-template-columns: 1fr;
     }
 
 
@@ -656,7 +651,7 @@ footer {
 
 
     .project-content {
-        padding: 26px;
+        padding: 24px;
     }
 
 
