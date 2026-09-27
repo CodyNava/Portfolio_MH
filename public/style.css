@@ -1,13 +1,13 @@
 :root {
-    --background: #616163;
+   --background: #3f3f42;
 
-    --surface: #6f6f72;
-    --surface-hover: #78787c;
+    --surface: #4b4b4f;
+    --surface-hover: #56565b;
 
     --text: #DAF5FF;
-    --text-muted: #c5d9df;
+    --text-muted: #b9d2da;
 
-    --border: #8a8a8d;
+    --border: #68686d;
 
     --accent: #44FFD2;
     --accent-secondary: #87F6FF;
