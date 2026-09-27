@@ -9,9 +9,9 @@
 
     --border: #262626;
 
-    --accent: #34D1BF;
+    --accent-warm: #34D1BF;
     --accent-secondary: #D1345B;
-    --accent-warm: #3454D1;
+    --accent: #3454D1;
 
     --content-width: 1300px;
 }
