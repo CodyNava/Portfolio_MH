@@ -1,14 +1,17 @@
 :root {
-    --background: #0b0d10;
-    --surface: #111418;
-    --surface-hover: #161a20;
+    --background: #011627;
 
-    --text: #f3f3f3;
-    --text-muted: #9da3ad;
+    --surface: #0b2233;
+    --surface-hover: #123047;
 
-    --border: #252a31;
+    --text: #FDFFFC;
+    --text-muted: #B8C7CC;
 
-    --accent: #64a9ff;
+    --border: #1E3A4D;
+
+    --accent: #5AD8CC;
+    --accent-secondary: #EE596A;
+    --accent-warm: #FFAA33;
 
     --content-width: 1300px;
 }
@@ -88,12 +91,13 @@ nav {
 nav a {
     color: var(--text-muted);
 
-    transition: color 0.2s ease;
+    transition:
+        color 0.2s ease;
 }
 
 
 nav a:hover {
-    color: var(--text);
+    color: var(--accent-secondary);
 }
 
 
@@ -163,7 +167,7 @@ nav a:hover {
 
 
 .primary-button {
-    background: var(--text);
+    background: var(--accent);
     color: var(--background);
 
     padding: 13px 20px;
@@ -171,18 +175,31 @@ nav a:hover {
     border-radius: 5px;
 
     font-weight: 700;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.primary-button:hover {
+    background: var(--accent-secondary);
+
+    transform: translateY(-2px);
 }
 
 
 .text-link {
     color: var(--text-muted);
+
+    transition:
+        color 0.2s ease;
 }
 
 
 .text-link:hover {
-    color: var(--text);
+    color: var(--accent-secondary);
 }
-
 
 
 /* -------------------- */
@@ -220,24 +237,6 @@ nav a:hover {
     font-size: 3rem;
 }
 
-/* -------------------- */
-/* PROJECT LINKS */
-/* -------------------- */
-
-.project-links {
-    margin-bottom: 18px;
-}
-
-.project-links a {
-    color: var(--accent);
-    font-weight: 600;
-    font-size: 0.95rem;
-}
-
-.project-links a:hover {
-    color: var(--text);
-}
-
 
 /* -------------------- */
 /* PROJECT CARD */
@@ -255,6 +254,17 @@ nav a:hover {
     border: 1px solid var(--border);
 
     background: var(--surface);
+
+    transition:
+        border-color 0.25s ease,
+        background 0.25s ease;
+}
+
+
+.project:hover {
+    border-color: var(--accent);
+
+    background: var(--surface-hover);
 }
 
 
@@ -286,7 +296,7 @@ nav a:hover {
 
     overflow: hidden;
 
-    background: #050607;
+    background: #06111d;
 
     align-self: start;
 }
@@ -299,9 +309,7 @@ nav a:hover {
     object-fit: cover;
 
     transition:
-        transform
-        0.5s
-        ease;
+        transform 0.5s ease;
 }
 
 
@@ -322,7 +330,6 @@ nav a:hover {
 
     min-width: 0;
 }
-
 
 
 @media (min-width: 901px) {
@@ -434,6 +441,32 @@ nav a:hover {
 
 
 /* -------------------- */
+/* PROJECT LINKS */
+/* -------------------- */
+
+.project-links {
+    margin-bottom: 18px;
+}
+
+
+.project-links a {
+    color: var(--accent);
+
+    font-weight: 600;
+
+    font-size: 0.95rem;
+
+    transition:
+        color 0.2s ease;
+}
+
+
+.project-links a:hover {
+    color: var(--accent-secondary);
+}
+
+
+/* -------------------- */
 /* TAGS */
 /* -------------------- */
 
@@ -457,6 +490,22 @@ nav a:hover {
     color: var(--text-muted);
 
     font-size: 0.8rem;
+
+    background: rgba(90, 216, 204, 0.04);
+
+    transition:
+        border-color 0.2s ease,
+        color 0.2s ease,
+        background 0.2s ease;
+}
+
+
+.tags span:hover {
+    border-color: var(--accent);
+
+    color: var(--text);
+
+    background: rgba(90, 216, 204, 0.08);
 }
 
 
@@ -495,6 +544,17 @@ nav a:hover {
     flex-direction: column;
 
     overflow: hidden;
+
+    transition:
+        border-color 0.25s ease,
+        background 0.25s ease;
+}
+
+
+.small-project-card:hover {
+    border-color: var(--accent);
+
+    background: var(--surface-hover);
 }
 
 
@@ -503,7 +563,7 @@ nav a:hover {
 
     overflow: hidden;
 
-    background: #050607;
+    background: #06111d;
 }
 
 
@@ -514,9 +574,7 @@ nav a:hover {
     object-fit: cover;
 
     transition:
-        transform
-        0.5s
-        ease;
+        transform 0.5s ease;
 }
 
 
@@ -661,11 +719,25 @@ nav a:hover {
     color: var(--text-muted);
 
     font-size: 1.1rem;
+
+    transition:
+        color 0.2s ease;
 }
 
 
 .contact-links a:hover {
-    color: var(--text);
+    color: var(--accent-secondary);
+}
+
+
+/* -------------------- */
+/* OPTIONAL HIGHLIGHT */
+/* -------------------- */
+
+.highlight {
+    color: var(--accent-warm);
+
+    font-weight: 700;
 }
 
 
@@ -728,9 +800,6 @@ footer {
     .project.reverse {
         grid-template-columns: 1fr;
     }
-	.more-projects-grid {
-        grid-template-columns: 1fr;
-    }
 
 
     .project.reverse .project-image,
@@ -746,6 +815,11 @@ footer {
 
     .project-content {
         height: auto;
+    }
+
+
+    .more-projects-grid {
+        grid-template-columns: 1fr;
     }
 
 
@@ -783,6 +857,7 @@ footer {
 
 
     .projects-section,
+    .more-projects-section,
     .about-section,
     .contact-section {
         padding-left: 20px;
@@ -795,7 +870,13 @@ footer {
     }
 
 
-    .project-header {
+    .small-project-content {
+        padding: 24px;
+    }
+
+
+    .project-header,
+    .small-project-header {
         flex-direction: column;
 
         gap: 8px;
