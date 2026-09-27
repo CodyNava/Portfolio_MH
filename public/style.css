@@ -228,9 +228,7 @@ nav a:hover {
 .project {
     display: grid;
 
-    grid-template-columns:
-        2.2fr
-        1fr;
+    grid-template-columns: 1fr 2.35fr;
 
     margin-bottom: 120px;
 
@@ -241,9 +239,7 @@ nav a:hover {
 
 
 .project.reverse {
-    grid-template-columns:
-        1fr
-        2.2fr;
+    grid-template-columns: 1fr 2.35fr;
 }
 
 
@@ -556,12 +552,16 @@ footer {
 @media (max-width: 1100px) {
 
     .project {
-        grid-template-columns: 2.35fr 1fr;
+        grid-template-columns:
+            1.6fr
+            1fr;
     }
 
 
     .project.reverse {
-        grid-template-columns: 1fr 2.35fr;
+        grid-template-columns:
+            1fr
+            1.6fr;
     }
 
 
