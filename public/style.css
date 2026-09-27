@@ -220,6 +220,24 @@ nav a:hover {
     font-size: 3rem;
 }
 
+/* -------------------- */
+/* PROJECT LINKS */
+/* -------------------- */
+
+.project-links {
+    margin-bottom: 18px;
+}
+
+.project-links a {
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.project-links a:hover {
+    color: var(--text);
+}
+
 
 /* -------------------- */
 /* PROJECT CARD */
@@ -442,6 +460,125 @@ nav a:hover {
 }
 
 
+/* -------------------- */
+/* MORE PROJECTS */
+/* -------------------- */
+
+.more-projects-section {
+    max-width: var(--content-width);
+
+    margin: 0 auto;
+
+    padding:
+        0
+        32px
+        120px;
+}
+
+
+.more-projects-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 30px;
+}
+
+
+.small-project-card {
+    border: 1px solid var(--border);
+
+    background: var(--surface);
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+}
+
+
+.small-project-image {
+    aspect-ratio: 16 / 9;
+
+    overflow: hidden;
+
+    background: #050607;
+}
+
+
+.small-project-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform
+        0.5s
+        ease;
+}
+
+
+.small-project-card:hover .small-project-image img {
+    transform: scale(1.015);
+}
+
+
+.small-project-content {
+    padding: 28px;
+
+    display: flex;
+    flex-direction: column;
+
+    flex: 1;
+}
+
+
+.small-project-header {
+    display: flex;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 18px;
+}
+
+
+.small-project-header h3 {
+    font-size: 1.7rem;
+
+    line-height: 1.1;
+}
+
+
+.small-project-description {
+    color: var(--text-muted);
+
+    margin-bottom: 20px;
+}
+
+
+.small-project-systems {
+    list-style: none;
+
+    margin-bottom: 24px;
+}
+
+
+.small-project-systems li {
+    color: var(--text-muted);
+
+    margin-bottom: 6px;
+}
+
+
+.small-project-systems li::before {
+    content: "— ";
+
+    color: var(--accent);
+}
+
 
 /* -------------------- */
 /* ABOUT */
@@ -589,6 +726,9 @@ footer {
 
     .project,
     .project.reverse {
+        grid-template-columns: 1fr;
+    }
+	.more-projects-grid {
         grid-template-columns: 1fr;
     }
 
