@@ -474,14 +474,15 @@ nav a:hover {
     color: var(--text-muted);
 
     margin-bottom: 6px;
-
     line-height: 1.45;
+
+    padding-left: 1.2em;
+    text-indent: -1.2em;
 }
 
 
 .project-details li::before {
     content: "— ";
-
     color: var(--accent);
 }
 
@@ -667,6 +668,9 @@ nav a:hover {
     color: var(--text-muted);
 
     margin-bottom: 6px;
+
+    padding-left: 1.2em;
+    text-indent: -1.2em;
 }
 
 
