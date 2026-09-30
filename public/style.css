@@ -179,6 +179,8 @@ nav a:hover {
 .hero-image {
     position: relative;
 
+    width: 100%;
+    max-width: 240px;
     aspect-ratio: 4 / 5;
 
     overflow: hidden;
@@ -198,8 +200,6 @@ nav a:hover {
     object-position: center;
 }
 
-
-/* kleines Accent-Detail */
 
 .hero-image::after {
     content: "";
