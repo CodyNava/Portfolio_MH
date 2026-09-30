@@ -1,5 +1,5 @@
 :root {
-   --background: #010B14;
+    --background: #010B14;
 
     --surface: #0A1A24;
     --surface-hover: #102732;
@@ -33,10 +33,9 @@ body {
     background: var(--background);
     color: var(--text);
 
-    font-family:
-        Inter,
-        Arial,
-        sans-serif;
+    font-family: Inter,
+    Arial,
+    sans-serif;
 
     line-height: 1.6;
 }
@@ -91,8 +90,7 @@ nav {
 nav a {
     color: var(--text-muted);
 
-    transition:
-        color 0.2s ease;
+    transition: color 0.2s ease;
 }
 
 
@@ -115,10 +113,22 @@ nav a:hover {
 
     margin: 0 auto;
 
-    padding:
-        150px
-        32px
-        170px;
+    padding: 110px 32px 130px;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.35fr)
+        minmax(300px, 0.65fr);
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+
+.hero-content {
+    min-width: 0;
 }
 
 
@@ -135,9 +145,9 @@ nav a:hover {
 
 
 .hero h1 {
-    max-width: 950px;
+    max-width: 850px;
 
-    font-size: clamp(3rem, 7vw, 6.8rem);
+    font-size: clamp(3rem, 6vw, 6.2rem);
 
     line-height: 0.98;
 
@@ -166,6 +176,46 @@ nav a:hover {
 }
 
 
+.hero-image {
+    position: relative;
+
+    aspect-ratio: 4 / 5;
+
+    overflow: hidden;
+
+    border: 1px solid var(--border);
+
+    background: var(--surface);
+}
+
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+}
+
+
+/* kleines Accent-Detail */
+
+.hero-image::after {
+    content: "";
+
+    position: absolute;
+
+    right: 0;
+    bottom: 0;
+
+    width: 70px;
+    height: 6px;
+
+    background: var(--accent);
+}
+
+
 .primary-button {
     background: var(--accent);
     color: var(--background);
@@ -176,9 +226,8 @@ nav a:hover {
 
     font-weight: 700;
 
-    transition:
-        background 0.2s ease,
-        transform 0.2s ease;
+    transition: background 0.2s ease,
+    transform 0.2s ease;
 }
 
 
@@ -192,8 +241,7 @@ nav a:hover {
 .text-link {
     color: var(--text-muted);
 
-    transition:
-        color 0.2s ease;
+    transition: color 0.2s ease;
 }
 
 
@@ -255,9 +303,8 @@ nav a:hover {
 
     background: var(--surface);
 
-    transition:
-        border-color 0.25s ease,
-        background 0.25s ease;
+    transition: border-color 0.25s ease,
+    background 0.25s ease;
 }
 
 
@@ -308,8 +355,7 @@ nav a:hover {
 
     object-fit: cover;
 
-    transition:
-        transform 0.5s ease;
+    transition: transform 0.5s ease;
 }
 
 
@@ -456,8 +502,7 @@ nav a:hover {
 
     font-size: 0.95rem;
 
-    transition:
-        color 0.2s ease;
+    transition: color 0.2s ease;
 }
 
 
@@ -493,10 +538,9 @@ nav a:hover {
 
     background: rgba(90, 216, 204, 0.04);
 
-    transition:
-        border-color 0.2s ease,
-        color 0.2s ease,
-        background 0.2s ease;
+    transition: border-color 0.2s ease,
+    color 0.2s ease,
+    background 0.2s ease;
 }
 
 
@@ -518,10 +562,7 @@ nav a:hover {
 
     margin: 0 auto;
 
-    padding:
-        0
-        32px
-        120px;
+    padding: 0 32px 120px;
 }
 
 
@@ -545,9 +586,8 @@ nav a:hover {
 
     overflow: hidden;
 
-    transition:
-        border-color 0.25s ease,
-        background 0.25s ease;
+    transition: border-color 0.25s ease,
+    background 0.25s ease;
 }
 
 
@@ -573,8 +613,7 @@ nav a:hover {
 
     object-fit: cover;
 
-    transition:
-        transform 0.5s ease;
+    transition: transform 0.5s ease;
 }
 
 
@@ -647,9 +686,7 @@ nav a:hover {
 
     margin: 0 auto;
 
-    padding:
-        130px
-        32px;
+    padding: 130px 32px;
 
     border-top: 1px solid var(--border);
 
@@ -693,9 +730,7 @@ nav a:hover {
 
     margin: 0 auto;
 
-    padding:
-        130px
-        32px;
+    padding: 130px 32px;
 
     border-top: 1px solid var(--border);
 }
@@ -720,8 +755,7 @@ nav a:hover {
 
     font-size: 1.1rem;
 
-    transition:
-        color 0.2s ease;
+    transition: color 0.2s ease;
 }
 
 
@@ -763,6 +797,22 @@ footer {
 /* -------------------- */
 
 @media (max-width: 1100px) {
+
+    .hero-inner {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+
+        padding-top: 80px;
+        padding-bottom: 100px;
+    }
+
+
+    .hero-image {
+        width: min(100%, 420px);
+
+        aspect-ratio: 4 / 5;
+    }
 
     .project {
         grid-template-columns:
@@ -849,10 +899,7 @@ footer {
 
 
     .hero-inner {
-        padding:
-            100px
-            20px
-            120px;
+        padding: 100px 20px 120px;
     }
 
 
